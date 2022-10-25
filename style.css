@@ -2,7 +2,7 @@
   /*background: #ffcd00;*/
   background: white;
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-  font-size: 11pt;
+  font-size: 14pt;
   line-height: 1.3;
 }
 
@@ -12,16 +12,16 @@ a:link {
 }
 
 a:visited {
-  color:  #87a420;
+  color:  #3b3b3b;
 }
 
 a:hover {
-  color: #596350;
+  color: #4d4d4d;
   text-decoration: underline; 
 }
 
 a:active {
-  color: #87a420;
+  color: #242424;
 }
 
 a.select{
@@ -137,7 +137,7 @@ div.footnote{
 	margin: 0px;
 	margin-top: -15px;
 	margin-left:20px;
-	font-size: 8pt;
+	font-size: 10pt;
 }
 
 table {
@@ -149,22 +149,18 @@ table {
  width: 100%;
 }
 
-/* table.audiotable {
-  /*display: none;*/
-} */
 
 td {
   vertical-align: middle; 
-    padding-top: 5px;
+  padding-top: 5px;
   padding-bottom: 5px;
 }
 
 td.secondary{
   text-align: left;
   width: 180px;
-   color: #8c857b;
-font-family: Georgia, serif;
-font-style: italic;
+  color: #8c857b;
+  font-family: Arial bold, sans-serif;
 }
 
 tr.highlight td {
@@ -197,9 +193,9 @@ h1 {
 
 h2 {
   color: #10081a;
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: 14pt;
+  font-family: Arial bold, sans-serif;
+  /* font-style: italic; */
+  font-size: 18pt;
   margin: 0px;
   margin-left: 5px;
   margin-bottom: 0px;
@@ -208,14 +204,14 @@ h2 {
 }
 
 h3 {
-  color: #8c857b;
+  color: #333333;
   font-family: Arial bold, sans-serif;
   margin: 5px;
   margin-left: 0px;
+  margin-right: 30px;
   /*border-bottom: 3px double #80927c;*/
   text-align: center;
 }
-
 
 
 h4 {
@@ -225,7 +221,7 @@ h4 {
   margin-bottom: 0px;
   padding: 0px;
   padding-left: 10px;
-  font-size: 10pt;
+  font-size: 12pt;
   /*border-bottom: 3px double #80927c;*/
   text-align: left;
 }
@@ -244,7 +240,7 @@ h5 {
 
 h6 {
   color: #000000;
-  font-family: Georgia, serif;
+  font-family: Arial bold, sans-serif;
   font-style: italic;
   font-size: 16pt;
   margin: 0px;

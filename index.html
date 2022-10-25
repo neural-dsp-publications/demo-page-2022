@@ -3,171 +3,205 @@
 
 <head>
 
-	<meta charset="utf-8" />
-	<title>Neural DSP Amp Modeling Paper Demopage</title>
-	<link rel="icon" type="image/vnd.microsoft.icon" href="image/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <title>Neural DSP Amp Modeling Paper Demopage</title>
+    <!-- <link rel="icon" type="image/vnd.microsoft.icon" href="image/favicon.ico"> -->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="image/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-	<div class="container">
-		<header class="header">
-			<table border="0">
-				<tr>
-					<td>
-						<h1>Audio samples</h1>
-						<h2> </h2>
-					</td>
-				</tr>
-			</table>
+    <div class="container">
+        <header class="header">
+            <table border="0">
+                <tr>
+                    <td>
+                        <h1>End-to-end amp modeling </h1>
+                        <h2>Audio samples</h2>
+                    </td>
+                </tr>
+            </table>
 
-		</header>
+        </header>
 
-		<div class="visible" id="area2">
+        <!-- https://neuraldsp.com -->
 
-			<table class ="audiotable" border="0" width="100%"><tr class="highlight">
-			<tr class="highlight">
-			<td class="secondary">
-			</td>
-			
-			<td class="audio">
-			<h3>LSTM</h3>
-			</td>
-			
-			<td class="audio">
-			<h3>SPICE</h3>
-			</td>
-			
-			<td class="audio">
-			<h3>Reference</h3>
-			</td>
-			
-			</tr><tr class="odd">
-			<td class="secondary">
-			   Sample 1
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/LSTM-32/LSTM-32-0.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/SPICE/SPICE-0.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/REF/REF-0.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			</tr><tr class="even">
-			<td class="secondary">
-			   Sample 2
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/LSTM-32/LSTM-32-1.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/SPICE/SPICE-1.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/REF/REF-1.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			</tr><tr class="odd">
-			<td class="secondary">
-			   Sample 3
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/LSTM-32/LSTM-32-2.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/SPICE/SPICE-2.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/REF/REF-2.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			</tr><tr class="even">
-			<td class="secondary">
-			   Sample 4
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/LSTM-32/LSTM-32-4.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/SPICE/SPICE-4.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/REF/REF-4.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			</tr><tr class="odd">
-			<td class="secondary">
-			   Sample 5
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/LSTM-32/LSTM-32-5.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/SPICE/SPICE-5.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			<td class="audio">
-			   <audio controls preload="none">
-				  <source src="./audio/REF/REF-5.wav" type="audio/wav">
-			   </audio>
-			</td>
-			
-			</tr>
-			</table>
-			
-			<br><br>
-			
-			</div>
 
-		<footer class="footer">
-			<p><i></i></p>
-		</footer>
-	</div>
+        <div class="visible" id="area2">
+
+
+            <p>
+                The following audio samples are provided as supplementary material for our paper <br> <b>  End-to-End Amp Modeling: From Data to Controllable Guitar Amplifier Models </b>
+			</p>
+    
+            <p>
+                <ul>
+					<li> <b> LSTM </b> is a control-dependent neural network operating directly on audio waveforms.
+						The model adjusts its response to amp knob positions provided as additional inputs, and can generalize to the full range of continous control of unseen positions.
+						We use a 32-cell LSTM network for demonstration purposes, as this configuration is well studied in the literature and known to be real-time feasible.
+					 </li>
+					<li> <b> SPICE </b> is an offline white-box circuit simulation method, based on LTSpice transient analysis. Making this model required careful circuit analysis and component value measurements.
+						Furthermore, the model requires offline rendering and is several orders of magnitude away from real-time operation. </li>
+					<li> <b> Reference </b> is a Matchless DC-30 tube amplifier used as a target device for modeling. 
+						The amplifier has five controls, <em> volume, bass, treble, tone cut, </em> and <em> master volume,</em> all of which must be recreated in an accurate model. </li>
+                </ul>
+            </p>
+
+			<p>
+				Reference recordings were made directly from the amplifier's output using a reactive loadbox. 
+				For consistency, all samples have the same DC-30 cabinet impulse response applied to them. Test samples vary in musical content, and the amplifier controls were adjusted to fit each context. 
+			</p>
+
+
+
+            <table class ="audiotable" border="0" width="100%"><tr class="highlight">
+            <tr class="highlight">
+            <td class="secondary">
+            </td>
+            
+            <td class="audio">
+            <h3>LSTM</h3>
+            </td>
+            
+            <td class="audio">
+            <h3>SPICE</h3>
+            </td>
+            
+            <td class="audio">
+            <h3>Reference</h3>
+            </td>
+            
+            </tr><tr class="odd">
+            <td class="secondary">
+               Sample 1
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/LSTM-32/LSTM-32-0.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/SPICE/SPICE-0.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/REF/REF-0.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            </tr><tr class="even">
+            <td class="secondary">
+               Sample 2
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/LSTM-32/LSTM-32-1.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/SPICE/SPICE-1.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/REF/REF-1.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            </tr><tr class="odd">
+            <td class="secondary">
+               Sample 3
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/LSTM-32/LSTM-32-2.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/SPICE/SPICE-2.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/REF/REF-2.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            </tr><tr class="even">
+            <td class="secondary">
+               Sample 4
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/LSTM-32/LSTM-32-4.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/SPICE/SPICE-4.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/REF/REF-4.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            </tr><tr class="odd">
+            <td class="secondary">
+               Sample 5
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/LSTM-32/LSTM-32-5.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/SPICE/SPICE-5.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            <td class="audio">
+               <audio controls preload="none">
+                  <source src="./audio/REF/REF-5.wav" type="audio/wav">
+               </audio>
+            </td>
+            
+            </tr>
+            </table>
+            
+			<br>
+			<p>
+				Find out more about Neural DSP and experience controllable neural amp models yourself at <a href="https://neuraldsp.com">neuraldsp.com</a>.
+			</p>
+
+            <br><br>
+            
+            </div>
+
+        <footer class="footer">
+            <p><i></i></p>
+        </footer>
+    </div>
 </body>
 
 </html>
